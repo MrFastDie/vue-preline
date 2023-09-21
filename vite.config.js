@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [vue()],
   build : {
     lib : {
-      entry : path.resolve(__dirname, 'src/index.ts'),
+      entry : path.resolve(__dirname, 'src/vue-preline.ts'),
       name : 'vue-preline',
       fileName : (format) => `vue-preline.${format}.js`
     },
