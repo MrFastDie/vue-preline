@@ -38,6 +38,7 @@
     }
   },
   "scripts": {
+    "release": "release-it",
     "build": "vite build && tsc --emitDeclarationOnly"
   },
   "peerDependencies": {
