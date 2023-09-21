@@ -7,7 +7,7 @@ This Vue 3 plugin publishes some tailwind and preline components.
 app.ts
 
     import createVuePlugin from "@mrfastdie/vue-preline";
-    import '../node_modules/@mrfastdie/vue-preline/style.css';
+    import '../node_modules/@mrfastdie/vue-preline/dist/style.css';
     ...
     const app = createApp(App);
     app.use(createVuePlugin())
