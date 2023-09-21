@@ -1,29 +1,48 @@
 # vue-preline
 
-This template should help get you started developing with Vue 3 in Vite.
+This Vue 3 plugin publishes some tailwind and preline components.
 
-## Recommended IDE Setup
+## Recommended Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+app.ts
 
-## Customize configuration
+    import createVuePlugin from "@mrfastdie/vue-preline";
+    import '../node_modules/@mrfastdie/vue-preline/style.css';
+    ...
+    const app = createApp(App);
+    app.use(createVuePlugin())
+    app.mount('#app');
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+If you need the power of fontawesome icons, install that plugin aswell.
 
-## Project Setup
 
-```sh
-npm install
-```
+## Components
 
-### Compile and Hot-Reload for Development
+ - [vp-grid](#vp-grid)
+ - [vp-input](#vp-input)
 
-```sh
-npm run dev
-```
+### VP-Grid
+This is a simple grid component.
 
-### Compile and Minify for Production
+Usage:
 
-```sh
-npm run build
-```
+    <vp-grid :cols="<numberOfCols>" :gap="<numberOfGab"></vp-grid>
+
+### VP-Input
+An input field
+
+Usage:
+
+    <vp-input />
+
+Following arguments are supported:
+ - `label` a string as label
+ - `placeholder` a string as placeholder
+ - `type` the input type, defaults to `text`
+ - `description` a string as field description
+ - `validate` `true`, `false` or `null` if the value should get validated
+ - `errText` string or null when validate is `false`
+ - `successText` string or null when validate is `true`
+ - `icon` a string array represents the icon from `fontawesome`
+ - `value` a string which can be used with the `.sync` modifier to get the current value of that field
+ 

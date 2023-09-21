@@ -17,5 +17,13 @@ export default {
         forms,
         aspectRatio,
         require('preline/plugin'),
-    ]
+    ],
+    safelist: [
+        {
+            pattern: /grid-cols-+/,
+        },
+        {
+            pattern: /gap-+/,
+        },
+    ],
 }
