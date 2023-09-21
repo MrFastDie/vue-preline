@@ -20,6 +20,7 @@ If you need the power of fontawesome icons, install that plugin aswell.
 
  - [vp-grid](#vp-grid)
  - [vp-input](#vp-input)
+ - [timeline](#timeline)
 
 ### VP-Grid
 This is a simple grid component.
@@ -46,3 +47,19 @@ Following arguments are supported:
  - `icon` a string array represents the icon from `fontawesome`
  - `value` a string which can be used with the `.sync` modifier to get the current value of that field
  
+### Timeline
+The timeline persists out of 3 components. Theres the wrapper:
+
+    <vp-timeline-wrapper>Timeline entries</vp-timeline-wrapper>
+
+And the child components for left and right hand side of that timeline:
+
+    <vp-timeline-entry-left>Timeline text</vp-timeline-entry-left>
+    <vp-timeline-entry-right>Timeline text</vp-timeline-entry-right>
+
+The child component accepts following arguments:
+ - `headline` a string representing the headline
+ - `date` a string the date or range
+ - `icon` a string array represents the icon from `fontawesome`
+ - `iconBackgroundColor` the css background color for the icon
+ - `iconTextColor` the css text color for the icon
