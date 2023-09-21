@@ -3,6 +3,9 @@ import VPGrid from "./components/VPGrid.vue";
 import VPTimelineWrapper from "./components/VPTimelineWrapper.vue";
 import VPTimelineEntryLeft from "./components/VPTimelineEntryLeft.vue";
 import VPTimelineEntryRight from "./components/VPTimelineEntryRight.vue";
+import VPCardImgTop from "./components/VPCardImgTop.vue";
+import VPCardImgLeft from "./components/VPCardImgLeft.vue";
+import VPCardImgRight from "./components/VPCardImgRight.vue";
 
 import "./vue-preline.css"
 
@@ -15,6 +18,10 @@ export default function createVuePlugin() {
             app.component('vp-timeline-wrapper', VPTimelineWrapper);
             app.component('vp-timeline-entry-left', VPTimelineEntryLeft);
             app.component('vp-timeline-entry-right', VPTimelineEntryRight);
+
+            app.component('vp-card-img-top', VPCardImgTop);
+            app.component('vp-card-img-left', VPCardImgLeft);
+            app.component('vp-card-img-right', VPCardImgRight);
 
             // append preline to dom
             if(!document.querySelector('#append-preline')) {

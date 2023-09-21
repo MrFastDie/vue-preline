@@ -21,6 +21,7 @@ If you need the power of fontawesome icons, install that plugin aswell.
  - [vp-grid](#vp-grid)
  - [vp-input](#vp-input)
  - [timeline](#timeline)
+ - [cards](#cards)
 
 ### VP-Grid
 This is a simple grid component.
@@ -63,3 +64,15 @@ The child component accepts following arguments:
  - `icon` a string array represents the icon from `fontawesome`
  - `iconBackgroundColor` the css background color for the icon
  - `iconTextColor` the css text color for the icon
+
+### Cards
+There are currently 3 card components:
+
+    <vp-card-img-top>Card text</vp-card-img-top>
+    <vp-card-img-left>Card text</vp-card-img-left>
+    <vp-card-img-right>Card text</vp-card-img-right>
+
+The cards accept following arguments:
+ - `imgSrc` a string which points to the image you want as your card image
+ - `title` a string as title
+ - `githubUrl` a string which points to your github repo
