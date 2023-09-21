@@ -1,7 +1,7 @@
 import { defineComponent, h, PropType } from 'vue';
 
 export default defineComponent({
-    name: 'YourComponentName',
+    name: 'vp-test',
     props: {
         title: {
             type: String as PropType<string>,
