@@ -1,12 +1,3 @@
-import VPInput from "./components/VPInput.vue";
-import VPGrid from "./components/VPGrid.vue";
-import VPTimelineWrapper from "./components/VPTimelineWrapper.vue";
-import VPTimelineEntryLeft from "./components/VPTimelineEntryLeft.vue";
-import VPTimelineEntryRight from "./components/VPTimelineEntryRight.vue";
-import VPCardImgTop from "./components/VPCardImgTop.vue";
-import VPCardImgLeft from "./components/VPCardImgLeft.vue";
-import VPCardImgRight from "./components/VPCardImgRight.vue";
-import VPTest from "./components/VPTest";
 import * as components from "./components";
 
 import "./vue-preline.css"
