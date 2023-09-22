@@ -5,10 +5,6 @@ import {h} from 'vue';
 export const VpInput = defineComponent({
     name: 'VpInput',
     props: {
-        cols: {
-            type: Number as PropType<number>,
-            default: 3
-        },
         label: {
             type: String as PropType<string>,
             required: true
