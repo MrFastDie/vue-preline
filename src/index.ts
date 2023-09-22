@@ -1,2 +1,7 @@
-export {default as VPTest} from './components/VPTest';
+import * as components from './components';
+
+export {
+    components
+}
+
 export {createVuePreline} from './vue-preline';

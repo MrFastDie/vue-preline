@@ -7,24 +7,16 @@ import VPCardImgTop from "./components/VPCardImgTop.vue";
 import VPCardImgLeft from "./components/VPCardImgLeft.vue";
 import VPCardImgRight from "./components/VPCardImgRight.vue";
 import VPTest from "./components/VPTest";
+import * as components from "./components";
 
 import "./vue-preline.css"
 
 export function createVuePreline() {
     return {
         install: (app, options = {}) => {
-            app.component('vp-input', VPInput);
-            app.component('vp-grid', VPGrid);
-
-            app.component('vp-timeline-wrapper', VPTimelineWrapper);
-            app.component('vp-timeline-entry-left', VPTimelineEntryLeft);
-            app.component('vp-timeline-entry-right', VPTimelineEntryRight);
-
-            app.component('vp-card-img-top', VPCardImgTop);
-            app.component('vp-card-img-left', VPCardImgLeft);
-            app.component('vp-card-img-right', VPCardImgRight);
-
-            app.component('vp-test', VPTest);
+            for (const key in components) {
+                app.component(key, components[key]);
+            }
 
             // append preline to dom
             if(!document.querySelector('#append-preline')) {
