@@ -1,7 +1,9 @@
-import {VPTest} from "@/index";
+import * as components from './components';
 
 declare module '@vue/runtime-core' {
-    interface GlobalComponents {
-        VPTest: typeof VPTest;
+    export interface GlobalComponents {
+        VPCardImgTop: typeof components.VpCardImgTop;
+        VPCardImgLeft: typeof components.VpCardImgLeft;
+        VPCardImgRight: typeof components.VpCardImgRight;
     }
 }
