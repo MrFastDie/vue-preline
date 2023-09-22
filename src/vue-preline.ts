@@ -1,7 +1,19 @@
 import * as components from "./components";
+import {App} from "vue";
 
 import "./vue-preline.css"
-import {App} from "vue";
+
+export { components };
+
+declare module '@vue/runtime-core' {
+    export interface GlobalComponents {
+        VpCardImgTop: typeof components.VpCardImgTop;
+        VpCardImgLeft: typeof components.VpCardImgLeft;
+        VpCardImgRight: typeof components.VpCardImgRight;
+
+        VpGrid: typeof components.VpGrid;
+    }
+}
 
 export function createVuePreline() {
     return {

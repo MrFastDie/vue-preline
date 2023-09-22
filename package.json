@@ -26,11 +26,12 @@
   ],
   "main": "./dist/vue-preline.umd.js",
   "module": "./dist/vue-preline.es.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/vue-preline.d.ts",
   "exports": {
     ".": {
       "import": "./dist/vue-preline.es.js",
-      "require": "./dist/vue-preline.umd.js"
+      "require": "./dist/vue-preline.umd.js",
+      "types": "./dist/vue-preline.d.ts"
     },
     "./dist/vue-preline.css": {
       "import": "./dist/style.css",
