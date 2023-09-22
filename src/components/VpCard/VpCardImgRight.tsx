@@ -1,4 +1,6 @@
 import {defineComponent, PropType} from 'vue';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import {h} from 'vue';
 
 export const VpCardImgRight = defineComponent({
     name: 'VpCardImgRight',
