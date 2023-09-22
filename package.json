@@ -26,7 +26,7 @@
   ],
   "main": "./dist/vue-preline.umd.js",
   "module": "./dist/vue-preline.es.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/vue-prelone.d.ts",
   "exports": {
     ".": {
       "import": "./dist/vue-preline.es.js",
