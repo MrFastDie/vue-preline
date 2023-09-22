@@ -1,4 +1,4 @@
-import {defineComponent, PropType, h} from 'vue';
+import {defineComponent, PropType} from 'vue';
 
 export const VpCardImgRight = defineComponent({
     name: 'VpCardImgRight',
