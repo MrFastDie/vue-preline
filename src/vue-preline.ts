@@ -12,6 +12,8 @@ declare module '@vue/runtime-core' {
         VpCardImgRight: typeof components.VpCardImgRight;
 
         VpGrid: typeof components.VpGrid;
+
+        VpInput: typeof components.VpInput;
     }
 }
 
