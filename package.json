@@ -10,11 +10,7 @@
     "tailwind",
     "preline"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MrFastDie/vue-preline.git",
-    "repository": "mrfastdie/vue-preline"
-  },
+  "repository": "https://github.com/MrFastDie/vue-preline",
   "homepage": "https://github.com/MrFastDie/vue-preline#readme",
   "bugs": {
     "url": "https://github.com/MrFastDie/vue-preline/issues"
