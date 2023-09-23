@@ -2,6 +2,7 @@ import * as components from "./components";
 import {App} from "vue";
 
 import "./vue-preline.css"
+import typography from "@tailwindcss/typography";
 
 export { components };
 
@@ -10,6 +11,8 @@ declare module '@vue/runtime-core' {
         VpCardImgTop: typeof components.VpCardImgTop;
         VpCardImgLeft: typeof components.VpCardImgLeft;
         VpCardImgRight: typeof components.VpCardImgRight;
+
+        VpColumns: typeof components.VpColumns;
 
         VpGrid: typeof components.VpGrid;
 

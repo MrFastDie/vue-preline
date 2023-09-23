@@ -20,6 +20,7 @@ If you need the power of fontawesome icons, install that plugin aswell.
 
  - [vp-grid](#vp-grid)
  - [vp-input](#vp-input)
+ - [vp-columns](#vp-columns)
  - [timeline](#timeline)
  - [cards](#cards)
 
@@ -60,6 +61,39 @@ Then you can use this childComponent like:
 
     <vp-input v-model:value="parentValue" />
 
+### vp-columns
+Usage:
+
+    <vp-columns columns="cols">entries</vp-columns>
+
+The attribute columns can be one of the following:
+ - 1
+ - 2
+ - 3
+ - 4
+ - 5
+ - 6
+ - 7
+ - 8
+ - 9
+ - 10
+ - 11
+ - 12
+ - auto
+ - 3xs
+ - 2xs
+ - xs
+ - sm
+ - md
+ - lg
+ - xl
+ - 2xl
+ - 3xl
+ - 4xl
+ - 5xl
+ - 6xl
+ - 7xl
+ 
 ### Timeline
 The timeline persists out of 3 components. This is the wrapper:
 
