@@ -14,6 +14,10 @@ declare module '@vue/runtime-core' {
         VpGrid: typeof components.VpGrid;
 
         VpInput: typeof components.VpInput;
+
+        VpTimelineWrapper: typeof components.VpTimelineWrapper;
+        VpTimelineEntryLeft: typeof components.VpTimelineEntryLeft;
+        VpTimelineEntryRight: typeof components.VpTimelineEntryRight;
     }
 }
 

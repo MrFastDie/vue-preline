@@ -40,13 +40,11 @@ export const VpInput = defineComponent({
         value: {
             type: String as PropType<string>,
             default: ""
-        },
+        }
     },
-    setup(props) {
-        const emit = defineEmits(['update:value']);
-        const updateValue = (newValue: string) => {
-            emit('update:value', newValue);
-        };
+    emits: ['update:value'],
+
+    setup(props, { emit }) {
         const id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 
         return () => (
@@ -58,7 +56,7 @@ export const VpInput = defineComponent({
                     <input
                         class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                         aria-describedby="hs-input-helper-text"
-                        onInput={(event: InputEvent) => updateValue((event.target as HTMLInputElement).value)}
+                        onInput={(event: InputEvent) => emit('update:value', (event.target as HTMLInputElement).value)}
                         value={props.value}
                         id={id}
                         type={props.type}

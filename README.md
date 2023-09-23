@@ -48,8 +48,20 @@ Following arguments are supported:
  - `icon` a string array represents the icon from `fontawesome`
  - `value` a string which can be used with the `.sync` modifier to get the current value of that field
  
+To update a value in the parentNode using the `value` set it up like:
+
+    <script setup lang="ts">
+    import {ref} from 'vue';
+    
+    const parentValue = ref('');
+    </script>
+
+Then you can use this childComponent like:
+
+    <vp-input v-model:value="parentValue" />
+
 ### Timeline
-The timeline persists out of 3 components. Theres the wrapper:
+The timeline persists out of 3 components. This is the wrapper:
 
     <vp-timeline-wrapper>Timeline entries</vp-timeline-wrapper>
 
@@ -75,4 +87,4 @@ There are currently 3 card components:
 The cards accept following arguments:
  - `imgSrc` a string which points to the image you want as your card image
  - `title` a string as title
- - `githubUrl` a string which points to your github repo
+ - `githubUrl` a string which points to your gitHub repo
