@@ -24,7 +24,7 @@ export const VpGrid = defineComponent({
     setup(props, {slots}) {
         const classList = [
             "grid-cols-" + props.cols,
-            "gap-" + props.cols,
+            "gap-" + props.gap,
             "grid",
             "shadow-sm",
             "overflow-hidden",
