@@ -20,7 +20,8 @@ export const VpTimelineEntryRight = defineComponent({
             "md:odd:flex-row-reverse",
             "group",
             "is-active",
-        ].push(...BuildGlobalPropsList(props));
+        ];
+        classList.push(...BuildGlobalPropsList(props));
 
         return () => (
             <div class={classList}>

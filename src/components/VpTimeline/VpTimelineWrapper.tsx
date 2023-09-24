@@ -23,7 +23,8 @@ export const VpTimelineWrapper = defineComponent({
             "before:from-transparent",
             "before:via-slate-300",
             "before:to-transparent",
-        ].push(...BuildGlobalPropsList(props));
+        ];
+        classList.push(...BuildGlobalPropsList(props));
         return () => (
             <div class={classList}>
                 {slots.default?.()}

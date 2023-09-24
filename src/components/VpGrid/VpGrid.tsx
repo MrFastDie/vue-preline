@@ -28,7 +28,8 @@ export const VpGrid = defineComponent({
             "grid",
             "shadow-sm",
             "overflow-hidden",
-        ].push(...BuildGlobalPropsList(props));
+        ];
+        classList.push(...BuildGlobalPropsList(props));
 
         return () => (
             <div class={classList}>

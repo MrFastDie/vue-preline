@@ -17,7 +17,8 @@ export const VpCardImgTop = defineComponent({
             "flex-[1_0_0%]",
             "bg-white",
             "dark:bg-gray-800",
-        ].push(...BuildGlobalPropsList(props));
+        ];
+        classList.push(...BuildGlobalPropsList(props));
 
         return () => (
             <div class={classList}>

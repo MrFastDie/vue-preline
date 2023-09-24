@@ -20,7 +20,8 @@ export const VpColumns = defineComponent({
     setup(props, {slots}) {
         const classList = [
             "columns-" + props.columns
-        ].push(...GlobalProps(props));
+        ];
+        classList.push(...GlobalProps(props));
 
         return () => (
             <div class={classList}>
