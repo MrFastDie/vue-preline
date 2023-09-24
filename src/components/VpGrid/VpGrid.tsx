@@ -1,22 +1,37 @@
-import {defineComponent, PropType} from 'vue';
+import {defineComponent, Prop} from 'vue';
+import {GlobalProps, BuildGlobalPropsList} from '../../util/GlobalProps';
+import {PropsFactory} from "../../util/PropsFactory";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import {h} from 'vue';
+
+const props = PropsFactory({
+    cols: {
+        type: Number,
+        default: 3
+    } as Prop<number>,
+    gap: {
+        type: Number,
+        default: 4
+    } as Prop<number>,
+}, "VpGrid")
 
 export const VpGrid = defineComponent({
     name: 'VpGrid',
     props: {
-        cols: {
-            type: Number as PropType<number>,
-            default: 3
-        },
-        gap: {
-            type: Number as PropType<number>,
-            default: 4
-        },
+        ...GlobalProps,
+        ...props,
     },
     setup(props, {slots}) {
+        const classList = [
+            "grid-cols-" + props.cols,
+            "gap-" + props.cols,
+            "grid",
+            "shadow-sm",
+            "overflow-hidden",
+        ].push(...BuildGlobalPropsList(props));
+
         return () => (
-            <div class={["grid-cols-" + props.cols, "gap-" + props.cols, "grid", "shadow-sm", "overflow-hidden"]}>
+            <div class={classList}>
                 {slots.default?.()}
             </div>
         );

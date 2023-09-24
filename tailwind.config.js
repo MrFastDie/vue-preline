@@ -25,5 +25,11 @@ export default {
         {
             pattern: /gap-+/,
         },
+        {
+            pattern: /p+/, // This is for padding like p- pl- there must be a better way same for margin below
+        },
+        {
+            pattern: /m+/,
+        },
     ],
 }

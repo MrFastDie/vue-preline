@@ -15,6 +15,16 @@ app.ts
 
 If you need the power of fontawesome icons, install that plugin aswell.
 
+There are some global types for `margin` and `padding` defined, as per tailwind doc.
+ - `p` padding
+ - `pt` padding-top
+ - `pr` padding-right
+ - `pb` padding-bottom
+ - `pl` padding-left
+ - `px` padding left and right
+ - `py` padding top and bottom
+
+And the same goes for m (margin)
 
 ## Components
 

@@ -1,35 +1,29 @@
-import {defineComponent, PropType} from 'vue';
+import {defineComponent} from 'vue';
+import {GlobalProps, BuildGlobalPropsList} from '../../util/GlobalProps';
+import {VpTimelineEntryProps} from "./props";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import {h} from 'vue';
 
 export const VpTimelineEntryRight = defineComponent({
     name: 'VpTimelineEntryRight',
     props: {
-        headline: {
-            type: String as PropType<string>,
-            required: true
-        },
-        date: {
-            type: String as PropType<string>,
-            required: true
-        },
-        icon: {
-            type: Array as PropType<string[]>,
-            default: () => []
-        },
-        iconBackgroundColor: {
-            type: String as PropType<string>,
-            default: null
-        },
-        iconTextColor: {
-            type: String as PropType<string>,
-            default: null
-        },
+        ...GlobalProps,
+        ...VpTimelineEntryProps("VpTimelineEntryRight"),
     },
     setup(props, {slots}) {
+        const classList = [
+            "relative",
+            "flex",
+            "items-center",
+            "justify-between",
+            "md:justify-normal",
+            "md:odd:flex-row-reverse",
+            "group",
+            "is-active",
+        ].push(...BuildGlobalPropsList(props));
+
         return () => (
-            <div
-                class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+            <div class={classList}>
 
                 <div
                     style={["backgroundColor: " + (props.iconBackgroundColor ?? 'antiquewhite') + ";", "color: " + (props.iconTextColor ?? 'black') + ";"]}

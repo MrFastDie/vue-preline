@@ -2,7 +2,6 @@ import * as components from "./components";
 import {App} from "vue";
 
 import "./vue-preline.css"
-import typography from "@tailwindcss/typography";
 
 export { components };
 

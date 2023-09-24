@@ -1,18 +1,29 @@
-import {defineComponent, PropType} from 'vue';
+import {defineComponent, Prop} from 'vue';
+import {GlobalProps} from '../../util/GlobalProps';
+import {PropsFactory} from "../../util/PropsFactory";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import {h} from 'vue';
+
+const props = PropsFactory({
+    columns: {
+        type: String,
+        required: true
+    } as Prop<string>,
+}, "VpColumns");
 
 export const VpColumns = defineComponent({
     name: 'VpColumns',
     props: {
-        columns: {
-            type: String as PropType<string>,
-            required: true
-        },
+        ...GlobalProps,
+        ...props,
     },
     setup(props, {slots}) {
+        const classList = [
+            "columns-" + props.columns
+        ].push(...GlobalProps(props));
+
         return () => (
-            <div class={"columns-" + props.columns}>
+            <div class={classList}>
                 {slots.default?.()}
             </div>
         );

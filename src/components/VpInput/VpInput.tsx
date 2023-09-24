@@ -1,54 +1,60 @@
-import {defineComponent, defineEmits, PropType} from 'vue';
+import {defineComponent, Prop} from 'vue';
+import {GlobalProps, BuildGlobalPropsList} from '../../util/GlobalProps';
+import {PropsFactory} from "../../util/PropsFactory";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import {h} from 'vue';
+
+const props = PropsFactory({
+        label: {
+            type: String,
+            required: true
+        } as Prop<string>,
+        placeholder: {
+            type: String,
+            required: true
+        } as Prop<string>,
+        type: {
+            type: String,
+            default: 'text'
+        } as Prop<string>,
+        description: {
+            type: String,
+            default: null
+        } as Prop<string>,
+        validate: {
+            type: Boolean,
+            default: null
+        } as Prop<boolean>,
+        errText: {
+            type: String,
+            default: null
+        } as Prop<string>,
+        successText: {
+            type: String,
+            default: null
+        } as Prop<string>,
+        icon: {
+            type: Array,
+            default: () => []
+        } as Prop<string[]>,
+        value: {
+            type: String,
+            default: ""
+        } as Prop<string>,
+    },
+    'VpInput');
 
 export const VpInput = defineComponent({
     name: 'VpInput',
     props: {
-        label: {
-            type: String as PropType<string>,
-            required: true
-        },
-        placeholder: {
-            type: String as PropType<string>,
-            required: true
-        },
-        type: {
-            type: String as PropType<string>,
-            default: 'text'
-        },
-        description: {
-            type: String as PropType<string>,
-            default: null
-        },
-        validate: {
-            type: Boolean as PropType<boolean>,
-            default: null
-        },
-        errText: {
-            type: String as PropType<string>,
-            default: null
-        },
-        successText: {
-            type: String as PropType<string>,
-            default: null
-        },
-        icon: {
-            type: Array as PropType<string[]>,
-            default: () => []
-        },
-        value: {
-            type: String as PropType<string>,
-            default: ""
-        }
+        ...GlobalProps,
+        ...props,
     },
     emits: ['update:value'],
-
-    setup(props, { emit }) {
+    setup(props, {emit}) {
         const id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-
         return () => (
-            <div>
+            <div class={BuildGlobalPropsList(props)}>
                 <label for={id} class="block text-sm text-left font-medium mb-2 dark:text-white">
                     {props.label}
                 </label>

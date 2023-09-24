@@ -1,31 +1,29 @@
-import {defineComponent, PropType} from 'vue';
+import {defineComponent} from 'vue';
+import {GlobalProps, BuildGlobalPropsList} from '../../util/GlobalProps';
+import {VpCardProps} from "./props";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import {h} from 'vue';
 
 export const VpCardImgLeft = defineComponent({
     name: 'VpCardImgLeft',
     props: {
-        imgSrc: {
-            type: String as PropType<string>,
-            required: true
-        },
-        imgDesc: {
-            type: String as PropType<string>,
-            required: true
-        },
-        title: {
-            type: String as PropType<string>,
-            required: true
-        },
-        githubUrl: {
-            type: String as PropType<string>,
-            default: null
-        },
+        ...GlobalProps,
+        ...VpCardProps("VpCardImgLeft"),
     },
     setup(props, {slots}) {
+        const classList = [
+            "bg-white",
+            "border",
+            "rounded-xl",
+            "shadow-sm",
+            "sm:flex",
+            "dark:bg-gray-800",
+            "dark:border-gray-700",
+            "dark:shadow-slate-700/[.7]",
+        ].push(...BuildGlobalPropsList(props));
+
         return () => (
-            <div
-                class="bg-white border rounded-xl shadow-sm sm:flex dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+            <div class={classList}>
                 <div
                     class="flex-shrink-0 relative w-full rounded-t-xl overflow-hidden pt-[40%] sm:rounded-l-xl sm:max-w-[15rem] md:rounded-tr-none md:max-w-xs">
                     <img class="w-full h-full absolute top-0 left-0 object-cover p-5" src={props.imgSrc}
